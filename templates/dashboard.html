@@ -318,7 +318,7 @@
 <!-- 그래프가 그려지는 부분 -->
  <!-- ChartJs를 이용하여 그래프를 생성 -->
       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-      <!-- <canvas class="my-4 w-100" id="myChart2" width="900" height="380"></canvas> -->
+      <canvas class="my-4 w-100" id="myChart2" width="900" height="380"></canvas>
 
       <!-- table 전 서브 제목 -->
       <h2>Section title</h2>
@@ -376,16 +376,6 @@
           borderWidth: 4,
           pointBackgroundColor: '#007bff',
           yAxisID : 'y'
-        },{
-          // y축 데이터
-          data: {{y1_data | tojson}},
-          type : 'bar',
-          lineTension: 0,
-          backgroundColor: 'transparent',
-          borderColor: '#007bff',
-          borderWidth: 4,
-          pointBackgroundColor: '#007bff',
-          yAxisID : 'y1'
         }
       ]
     },
@@ -397,28 +387,18 @@
         tooltip: {
           boxPadding: 3
         }
-      },
-      scales : {
-        y : {
-          position : 'left'
-        },
-        y1 : {
-          position : 'right',
-          min : 0,
-          max : 1000000000
-        }
       }
     }
   })
     </script>
 <!-- ######################### -->
     <!-- 표를 만들어주는 JavaScrap 파일 -->
-    <!-- <script>
+    <script>
       // Graphs
  const ctx2 = document.getElementById('myChart2')
  // eslint-disable-next-line no-unused-vars
  const myChart2 = new Chart(ctx2, {
-   type: 'line',
+   type: 'bar',
    data: {
      // x축 데이터
      labels: {{x_data | tojson}},
@@ -443,5 +423,5 @@
      }
    }
  })
-   </script> -->
+   </script>
     </html>
