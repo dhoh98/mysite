@@ -155,5 +155,3 @@ def dashboard():
                            x_data = x_data,
                            y_data = y_data,
                            y1_data = y1_data)
-
-app.run(debug=True)
